@@ -1,0 +1,24 @@
+running develop
+running egg_info
+creating defendagentattack.egg-info
+writing defendagentattack.egg-info/PKG-INFO
+writing dependency_links to defendagentattack.egg-info/dependency_links.txt
+writing entry points to defendagentattack.egg-info/entry_points.txt
+writing requirements to defendagentattack.egg-info/requires.txt
+writing top-level names to defendagentattack.egg-info/top_level.txt
+writing manifest file 'defendagentattack.egg-info/SOURCES.txt'
+reading manifest file 'defendagentattack.egg-info/SOURCES.txt'
+writing manifest file 'defendagentattack.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/lib/python3.10/site-packages/defendagentattack.egg-link (link to .)
+Installing fight-now script to /home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/lib/DefendAgentAttack
+Installing multi-agent script to /home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/lib/DefendAgentAttack
+Installing reward-simulator script to /home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/lib/DefendAgentAttack
+
+Installed /home/hanimn/intro_robo_ws/src/Final/build/defendagentattack
+running symlink_data
+creating /home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/ament_index
+creating /home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/ament_index/resource_index
+creating /home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/ament_index/resource_index/packages
+symbolically linking /home/hanimn/intro_robo_ws/src/Final/build/defendagentattack/resource/defendagentattack -> /home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/ament_index/resource_index/packages
+symbolically linking /home/hanimn/intro_robo_ws/src/Final/build/defendagentattack/package.xml -> /home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack

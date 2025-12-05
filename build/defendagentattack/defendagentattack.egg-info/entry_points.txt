@@ -1,0 +1,5 @@
+[console_scripts]
+fight-now = defendagentattack.fightnow.py
+multi-agent = defendagentattack.multiagent.py
+reward-simulator = defendagentattack.reward_simlator
+

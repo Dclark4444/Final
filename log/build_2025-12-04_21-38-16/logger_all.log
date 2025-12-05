@@ -1,0 +1,296 @@
+[0.316s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.316s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x73ed6c5a1990>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x73ed6c677460>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x73ed6c677460>>)
+[0.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.713s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.714s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.714s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.714s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/hanimn/intro_robo_ws/src/Final'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.714s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.741s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.742s] Level 1:colcon.colcon_core.package_identification:_identify(DefendAgentAttack) by extensions ['ignore', 'ignore_ament_install']
+[0.742s] Level 1:colcon.colcon_core.package_identification:_identify(DefendAgentAttack) by extension 'ignore'
+[0.742s] Level 1:colcon.colcon_core.package_identification:_identify(DefendAgentAttack) by extension 'ignore_ament_install'
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(DefendAgentAttack) by extensions ['colcon_pkg']
+[0.743s] Level 1:colcon.colcon_core.package_identification:_identify(DefendAgentAttack) by extension 'colcon_pkg'
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(DefendAgentAttack) by extensions ['colcon_meta']
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(DefendAgentAttack) by extension 'colcon_meta'
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(DefendAgentAttack) by extensions ['ros']
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(DefendAgentAttack) by extension 'ros'
+[0.748s] DEBUG:colcon.colcon_core.package_identification:Package 'DefendAgentAttack' with type 'ros.ament_python' and name 'defendagentattack'
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extensions ['ignore', 'ignore_ament_install']
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extension 'ignore'
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extension 'ignore_ament_install'
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extensions ['colcon_pkg']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extension 'colcon_pkg'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extensions ['colcon_meta']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extension 'colcon_meta'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extensions ['ros']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extension 'ros'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extensions ['cmake', 'python']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extension 'cmake'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extension 'python'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extensions ['python_setup_py']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN) by extension 'python_setup_py'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extensions ['ignore', 'ignore_ament_install']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extension 'ignore'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extension 'ignore_ament_install'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extensions ['colcon_pkg']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extension 'colcon_pkg'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extensions ['colcon_meta']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extension 'colcon_meta'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extensions ['ros']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extension 'ros'
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extensions ['cmake', 'python']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extension 'cmake'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extension 'python'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extensions ['python_setup_py']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Attacker) by extension 'python_setup_py'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extensions ['ignore', 'ignore_ament_install']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extension 'ignore'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extension 'ignore_ament_install'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extensions ['colcon_pkg']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extension 'colcon_pkg'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extensions ['colcon_meta']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extension 'colcon_meta'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extensions ['ros']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extension 'ros'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extensions ['cmake', 'python']
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extension 'cmake'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extension 'python'
+[0.751s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extensions ['python_setup_py']
+[0.752s] Level 1:colcon.colcon_core.package_identification:_identify(NN/Defender) by extension 'python_setup_py'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extension 'ignore'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extension 'ignore_ament_install'
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extensions ['colcon_pkg']
+[0.754s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extension 'colcon_pkg'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extensions ['colcon_meta']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extension 'colcon_meta'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extensions ['ros']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extension 'ros'
+[0.758s] DEBUG:colcon.colcon_core.package_identification:Package 'attackdefend_interfaces' with type 'ros.ament_cmake' and name 'attackdefend_interfaces'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.761s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(my_classifier) by extensions ['ignore', 'ignore_ament_install']
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(my_classifier) by extension 'ignore'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(my_classifier) by extension 'ignore_ament_install'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(my_classifier) by extensions ['colcon_pkg']
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(my_classifier) by extension 'colcon_pkg'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(my_classifier) by extensions ['colcon_meta']
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(my_classifier) by extension 'colcon_meta'
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(my_classifier) by extensions ['ros']
+[0.762s] Level 1:colcon.colcon_core.package_identification:_identify(my_classifier) by extension 'ros'
+[0.765s] DEBUG:colcon.colcon_core.package_identification:Package 'my_classifier' with type 'ros.ament_python' and name 'my_classifier'
+[0.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.765s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.796s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.796s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.858s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 21 installed packages in /home/hanimn/intro_robo_ws/src/install
+[0.889s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 22 installed packages in /home/hanimn/intro_robo_ws/install
+[0.892s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 452 installed packages in /opt/ros/humble
+[0.895s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_args' from command line to 'None'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_target' from command line to 'None'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.124s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.125s] DEBUG:colcon.colcon_core.verb:Building package 'attackdefend_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hanimn/intro_robo_ws/src/Final/build/attackdefend_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces', 'merge_install': False, 'path': '/home/hanimn/intro_robo_ws/src/Final/attackdefend_interfaces', 'symlink_install': True, 'test_result_base': None}
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_args' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_target' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_clean_cache' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_clean_first' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_force_configure' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'ament_cmake_args' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'catkin_cmake_args' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.125s] DEBUG:colcon.colcon_core.verb:Building package 'defendagentattack' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hanimn/intro_robo_ws/src/Final/build/defendagentattack', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack', 'merge_install': False, 'path': '/home/hanimn/intro_robo_ws/src/Final/DefendAgentAttack', 'symlink_install': True, 'test_result_base': None}
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'my_classifier' build argument 'cmake_args' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'my_classifier' build argument 'cmake_target' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'my_classifier' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'my_classifier' build argument 'cmake_clean_cache' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'my_classifier' build argument 'cmake_clean_first' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'my_classifier' build argument 'cmake_force_configure' from command line to 'False'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'my_classifier' build argument 'ament_cmake_args' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'my_classifier' build argument 'catkin_cmake_args' from command line to 'None'
+[1.125s] Level 5:colcon.colcon_core.verb:set package 'my_classifier' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.125s] DEBUG:colcon.colcon_core.verb:Building package 'my_classifier' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hanimn/intro_robo_ws/src/Final/build/my_classifier', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier', 'merge_install': False, 'path': '/home/hanimn/intro_robo_ws/src/Final/my_classifier', 'symlink_install': True, 'test_result_base': None}
+[1.125s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.126s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.127s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/hanimn/intro_robo_ws/src/Final/attackdefend_interfaces' with build type 'ament_cmake'
+[1.127s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/hanimn/intro_robo_ws/src/Final/attackdefend_interfaces'
+[1.129s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.129s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.129s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.175s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/hanimn/intro_robo_ws/src/Final/DefendAgentAttack' with build type 'ament_python'
+[1.175s] Level 1:colcon.colcon_core.shell:create_environment_hook('defendagentattack', 'ament_prefix_path')
+[1.175s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack/hook/ament_prefix_path.ps1'
+[1.189s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack/hook/ament_prefix_path.dsv'
+[1.195s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack/hook/ament_prefix_path.sh'
+[1.200s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.200s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.236s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/hanimn/intro_robo_ws/src/Final/my_classifier' with build type 'ament_python'
+[1.236s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_classifier', 'ament_prefix_path')
+[1.236s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/hook/ament_prefix_path.ps1'
+[1.244s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/hook/ament_prefix_path.dsv'
+[1.249s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/hook/ament_prefix_path.sh'
+[1.255s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.255s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.343s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hanimn/intro_robo_ws/src/Final/build/attackdefend_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hanimn/intro_robo_ws/src/install/warmup_project:/home/hanimn/intro_robo_ws/src/install/q_learning_project:/home/hanimn/intro_robo_ws/src/install/particle_filter_project:/home/hanimn/intro_robo_ws/src/install/my_classifier:/home/hanimn/intro_robo_ws/src/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/src/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/src/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/src/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/src/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/src/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/src/install/defendagentattack:/home/hanimn/intro_robo_ws/install/my_classifier:/home/hanimn/intro_robo_ws/install/defendagentattack:/home/hanimn/intro_robo_ws/install/warmup_project:/home/hanimn/intro_robo_ws/install/q_learning_project:/home/hanimn/intro_robo_ws/install/particle_filter_project:/home/hanimn/intro_robo_ws/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/install/DefendAgentAttack:/opt/ros/humble /usr/bin/cmake /home/hanimn/intro_robo_ws/src/Final/attackdefend_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces
+[1.915s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/hanimn/intro_robo_ws/src/Final/DefendAgentAttack'
+[1.915s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.915s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.459s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/hanimn/intro_robo_ws/src/Final/my_classifier'
+[2.460s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.460s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.236s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hanimn/intro_robo_ws/src/Final/build/defendagentattack': PYTHONPATH=/home/hanimn/intro_robo_ws/src/Final/build/defendagentattack/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hanimn/intro_robo_ws/src/Final/build/defendagentattack/build --no-deps symlink_data
+[3.236s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/__init__.py
+[3.237s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/live_demo.py
+[3.237s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/record_images.py
+[3.238s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/nn.py
+[3.239s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/__pycache__/__init__.cpython-310.pyc
+[3.239s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/__pycache__/live_demo.cpython-310.pyc
+[3.240s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/__pycache__/record_images.cpython-310.pyc
+[3.240s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/__pycache__/nn.cpython-310.pyc
+[3.244s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/share/ament_index/resource_index/packages/my_classifier
+[3.246s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/package.xml
+[3.248s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info/top_level.txt
+[3.248s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info/requires.txt
+[3.249s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info/PKG-INFO
+[3.250s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.250s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info/entry_points.txt
+[3.251s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info/zip-safe
+[3.251s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.253s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/clarkd26/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier/live_demo
+[3.289s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hanimn/intro_robo_ws/src/Final/build/my_classifier': PYTHONPATH=/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build --no-deps symlink_data --force
+[4.468s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_classifier', 'pythonpath_develop')
+[4.469s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/share/my_classifier/hook/pythonpath_develop.ps1'
+[4.469s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hanimn/intro_robo_ws/src/Final/build/my_classifier' returned '0': PYTHONPATH=/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build --no-deps symlink_data --force
+[4.479s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/share/my_classifier/hook/pythonpath_develop.dsv'
+[4.484s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/share/my_classifier/hook/pythonpath_develop.sh'
+[4.491s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier' for CMake module files
+[4.498s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier' for CMake config files
+[4.513s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib'
+[4.513s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/bin'
+[4.514s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/pkgconfig/my_classifier.pc'
+[4.515s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages'
+[4.515s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_classifier', 'pythonpath')
+[4.515s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/hook/pythonpath.ps1'
+[4.520s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/hook/pythonpath.dsv'
+[4.525s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/hook/pythonpath.sh'
+[4.529s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/bin'
+[4.529s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_classifier)
+[4.530s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/package.ps1'
+[4.534s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/package.dsv'
+[4.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/package.sh'
+[4.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/package.bash'
+[4.550s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier/package.zsh'
+[4.556s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/colcon-core/packages/my_classifier)
+[4.561s] Level 1:colcon.colcon_core.shell:create_environment_hook('defendagentattack', 'pythonpath_develop')
+[4.561s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/build/defendagentattack/share/defendagentattack/hook/pythonpath_develop.ps1'
+[4.572s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hanimn/intro_robo_ws/src/Final/build/defendagentattack' returned '0': PYTHONPATH=/home/hanimn/intro_robo_ws/src/Final/build/defendagentattack/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hanimn/intro_robo_ws/src/Final/build/defendagentattack/build --no-deps symlink_data
+[4.573s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hanimn/intro_robo_ws/src/Final/build/defendagentattack/share/defendagentattack/hook/pythonpath_develop.dsv'
+[4.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/build/defendagentattack/share/defendagentattack/hook/pythonpath_develop.sh'
+[4.584s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack' for CMake module files
+[4.588s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack' for CMake config files
+[4.599s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/lib'
+[4.599s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/bin'
+[4.600s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/lib/pkgconfig/defendagentattack.pc'
+[4.600s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/lib/python3.10/site-packages'
+[4.600s] Level 1:colcon.colcon_core.shell:create_environment_hook('defendagentattack', 'pythonpath')
+[4.600s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack/hook/pythonpath.ps1'
+[4.606s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack/hook/pythonpath.dsv'
+[4.610s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack/hook/pythonpath.sh'
+[4.615s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/bin'
+[4.615s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(defendagentattack)
+[4.615s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack/package.ps1'
+[4.620s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack/package.dsv'
+[4.624s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack/package.sh'
+[4.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack/package.bash'
+[4.635s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/defendagentattack/package.zsh'
+[4.639s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hanimn/intro_robo_ws/src/Final/install/defendagentattack/share/colcon-core/packages/defendagentattack)
+[8.274s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hanimn/intro_robo_ws/src/Final/build/attackdefend_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hanimn/intro_robo_ws/src/install/warmup_project:/home/hanimn/intro_robo_ws/src/install/q_learning_project:/home/hanimn/intro_robo_ws/src/install/particle_filter_project:/home/hanimn/intro_robo_ws/src/install/my_classifier:/home/hanimn/intro_robo_ws/src/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/src/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/src/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/src/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/src/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/src/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/src/install/defendagentattack:/home/hanimn/intro_robo_ws/install/my_classifier:/home/hanimn/intro_robo_ws/install/defendagentattack:/home/hanimn/intro_robo_ws/install/warmup_project:/home/hanimn/intro_robo_ws/install/q_learning_project:/home/hanimn/intro_robo_ws/install/particle_filter_project:/home/hanimn/intro_robo_ws/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/install/DefendAgentAttack:/opt/ros/humble /usr/bin/cmake /home/hanimn/intro_robo_ws/src/Final/attackdefend_interfaces -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces
+[8.313s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hanimn/intro_robo_ws/src/Final/build/attackdefend_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hanimn/intro_robo_ws/src/install/warmup_project:/home/hanimn/intro_robo_ws/src/install/q_learning_project:/home/hanimn/intro_robo_ws/src/install/particle_filter_project:/home/hanimn/intro_robo_ws/src/install/my_classifier:/home/hanimn/intro_robo_ws/src/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/src/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/src/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/src/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/src/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/src/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/src/install/defendagentattack:/home/hanimn/intro_robo_ws/install/my_classifier:/home/hanimn/intro_robo_ws/install/defendagentattack:/home/hanimn/intro_robo_ws/install/warmup_project:/home/hanimn/intro_robo_ws/install/q_learning_project:/home/hanimn/intro_robo_ws/install/particle_filter_project:/home/hanimn/intro_robo_ws/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/install/DefendAgentAttack:/opt/ros/humble /usr/bin/cmake --build /home/hanimn/intro_robo_ws/src/Final/build/attackdefend_interfaces -- -j4 -l4
+[8.376s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hanimn/intro_robo_ws/src/Final/build/attackdefend_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hanimn/intro_robo_ws/src/install/warmup_project:/home/hanimn/intro_robo_ws/src/install/q_learning_project:/home/hanimn/intro_robo_ws/src/install/particle_filter_project:/home/hanimn/intro_robo_ws/src/install/my_classifier:/home/hanimn/intro_robo_ws/src/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/src/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/src/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/src/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/src/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/src/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/src/install/defendagentattack:/home/hanimn/intro_robo_ws/install/my_classifier:/home/hanimn/intro_robo_ws/install/defendagentattack:/home/hanimn/intro_robo_ws/install/warmup_project:/home/hanimn/intro_robo_ws/install/q_learning_project:/home/hanimn/intro_robo_ws/install/particle_filter_project:/home/hanimn/intro_robo_ws/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/install/DefendAgentAttack:/opt/ros/humble /usr/bin/cmake --build /home/hanimn/intro_robo_ws/src/Final/build/attackdefend_interfaces -- -j4 -l4
+[8.409s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/hanimn/intro_robo_ws/src/Final/build/attackdefend_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hanimn/intro_robo_ws/src/install/warmup_project:/home/hanimn/intro_robo_ws/src/install/q_learning_project:/home/hanimn/intro_robo_ws/src/install/particle_filter_project:/home/hanimn/intro_robo_ws/src/install/my_classifier:/home/hanimn/intro_robo_ws/src/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/src/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/src/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/src/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/src/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/src/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/src/install/defendagentattack:/home/hanimn/intro_robo_ws/install/my_classifier:/home/hanimn/intro_robo_ws/install/defendagentattack:/home/hanimn/intro_robo_ws/install/warmup_project:/home/hanimn/intro_robo_ws/install/q_learning_project:/home/hanimn/intro_robo_ws/install/particle_filter_project:/home/hanimn/intro_robo_ws/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/install/DefendAgentAttack:/opt/ros/humble /usr/bin/cmake --install /home/hanimn/intro_robo_ws/src/Final/build/attackdefend_interfaces
+[8.689s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(attackdefend_interfaces)
+[8.689s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces' for CMake module files
+[8.690s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/hanimn/intro_robo_ws/src/Final/build/attackdefend_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/hanimn/intro_robo_ws/src/install/warmup_project:/home/hanimn/intro_robo_ws/src/install/q_learning_project:/home/hanimn/intro_robo_ws/src/install/particle_filter_project:/home/hanimn/intro_robo_ws/src/install/my_classifier:/home/hanimn/intro_robo_ws/src/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/src/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/src/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/src/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/src/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/src/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/src/install/defendagentattack:/home/hanimn/intro_robo_ws/install/my_classifier:/home/hanimn/intro_robo_ws/install/defendagentattack:/home/hanimn/intro_robo_ws/install/warmup_project:/home/hanimn/intro_robo_ws/install/q_learning_project:/home/hanimn/intro_robo_ws/install/particle_filter_project:/home/hanimn/intro_robo_ws/install/lab_f_image_classifier:/home/hanimn/intro_robo_ws/install/lab_e_traffic_bot:/home/hanimn/intro_robo_ws/install/lab_b_line_follower:/home/hanimn/intro_robo_ws/install/lab_a_stop_at_wall:/home/hanimn/intro_robo_ws/install/lab_a_spin_circles:/home/hanimn/intro_robo_ws/install/first_ros2_nodes:/home/hanimn/intro_robo_ws/install/DefendAgentAttack:/opt/ros/humble /usr/bin/cmake --install /home/hanimn/intro_robo_ws/src/Final/build/attackdefend_interfaces
+[8.695s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces' for CMake config files
+[8.705s] Level 1:colcon.colcon_core.shell:create_environment_hook('attackdefend_interfaces', 'cmake_prefix_path')
+[8.705s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/hook/cmake_prefix_path.ps1'
+[8.712s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/hook/cmake_prefix_path.dsv'
+[8.719s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/hook/cmake_prefix_path.sh'
+[8.724s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/bin'
+[8.724s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/lib/pkgconfig/attackdefend_interfaces.pc'
+[8.725s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/lib/python3.10/site-packages'
+[8.725s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/bin'
+[8.725s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/package.ps1'
+[8.730s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/package.dsv'
+[8.735s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/package.sh'
+[8.740s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/package.bash'
+[8.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/package.zsh'
+[8.748s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/colcon-core/packages/attackdefend_interfaces)
+[8.759s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(attackdefend_interfaces)
+[8.759s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces' for CMake module files
+[8.761s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces' for CMake config files
+[8.768s] Level 1:colcon.colcon_core.shell:create_environment_hook('attackdefend_interfaces', 'cmake_prefix_path')
+[8.769s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/hook/cmake_prefix_path.ps1'
+[8.774s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/hook/cmake_prefix_path.dsv'
+[8.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/hook/cmake_prefix_path.sh'
+[8.784s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/bin'
+[8.784s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/lib/pkgconfig/attackdefend_interfaces.pc'
+[8.785s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/lib/python3.10/site-packages'
+[8.785s] Level 1:colcon.colcon_core.environment:checking '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/bin'
+[8.785s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/package.ps1'
+[8.789s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/package.dsv'
+[8.794s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/package.sh'
+[8.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/package.bash'
+[8.802s] INFO:colcon.colcon_core.shell:Creating package script '/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/attackdefend_interfaces/package.zsh'
+[8.806s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/hanimn/intro_robo_ws/src/Final/install/attackdefend_interfaces/share/colcon-core/packages/attackdefend_interfaces)
+[8.808s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[8.808s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[8.808s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[8.808s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[8.842s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[8.842s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[8.842s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[8.848s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[8.848s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hanimn/intro_robo_ws/src/Final/install/local_setup.ps1'
+[8.853s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hanimn/intro_robo_ws/src/Final/install/_local_setup_util_ps1.py'
+[8.858s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hanimn/intro_robo_ws/src/Final/install/setup.ps1'
+[8.884s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hanimn/intro_robo_ws/src/Final/install/local_setup.sh'
+[8.891s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hanimn/intro_robo_ws/src/Final/install/_local_setup_util_sh.py'
+[8.896s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hanimn/intro_robo_ws/src/Final/install/setup.sh'
+[8.926s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hanimn/intro_robo_ws/src/Final/install/local_setup.bash'
+[8.931s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hanimn/intro_robo_ws/src/Final/install/setup.bash'
+[8.955s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hanimn/intro_robo_ws/src/Final/install/local_setup.zsh'
+[8.961s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hanimn/intro_robo_ws/src/Final/install/setup.zsh'
