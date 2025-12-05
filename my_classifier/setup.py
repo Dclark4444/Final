@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+		'record_images = my_classifier.record_images:main',
 		'live_demo = my_classifier.live_demo:main'
         ],
     },

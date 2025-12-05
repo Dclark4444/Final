@@ -11,7 +11,7 @@ class SingleFrameCapturer(Node):
         super().__init__('single_frame_capturer')
 
         # Directory to save images
-        self.image_dir = "/home/clarkd26/intro_robo_ws/src/final_project/final_project/images/"
+        self.image_dir = "/home/clarkd26/intro_robo_ws/src/Final/my_classifier/my_classifier/images/"
         os.makedirs(self.image_dir, exist_ok=True)
 
         # Counter for saved images
