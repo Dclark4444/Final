@@ -1,0 +1,3 @@
+[console_scripts]
+live_demo = my_classifier.live_demo:main
+
