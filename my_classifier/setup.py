@@ -21,7 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
 		'record_images = my_classifier.record_images:main',
-		'live_demo = my_classifier.live_demo:main'
+		'execute_policy = my_classifier.execute_policy:main'
         ],
     },
 )
