@@ -1,4 +1,0 @@
-[console_scripts]
-live_demo = my_classifier.live_demo:main
-record_images = my_classifier.record_images:main
-
