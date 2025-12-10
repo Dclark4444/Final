@@ -7,7 +7,7 @@ import cv2
 import tensorflow as tf
 import numpy as np
 
-from attack_defend_nodes import Attack_move, Defense_move
+from my_classifier.attack_defend_nodes import Attack_move, Defense_move
 
 TURTLE_BOT_ID = '/tb07'
 
