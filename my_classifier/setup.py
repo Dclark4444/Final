@@ -20,8 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-		'record_images = my_classifier.record_images:main',
-		'execute_policy = my_classifier.execute_policy:main'
+		'record-images = my_classifier.record_images:main',
+		'execute-policy = my_classifier.execute_policy:main',
         ],
     },
 )
