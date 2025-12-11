@@ -61,9 +61,11 @@ class ExecutePolicy(Node):
     def callback(self, msg):
         try:
             frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
-
+            self.get_logger().info(f"1")
             img = cv2.resize(frame, IMG_SIZE)
+            self.get_logger().info(f"2")
             img = img.astype(np.float32) / 255.0
+            self.get_logger().info(f"3")
             self.image = np.expand_dims(img, axis=0)
         except:
             self.get_logger().info(f"Camera could not be read")
