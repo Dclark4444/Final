@@ -63,7 +63,9 @@ class ExecutePolicy(Node):
         img = img.astype(np.float32) / 255.0
         img = np.expand_dims(img, axis=0)
 
+        self.get_logger().info('pre-prediction')
         pred = self.model.predict(img, verbose=0)[0][0]
+        self.get_logger().info('post-prediction')
 
         self.label = "RIGHT" if pred >= 0.5 else "LEFT"
         self.confidence = pred if pred >= 0.5 else 1 - pred
