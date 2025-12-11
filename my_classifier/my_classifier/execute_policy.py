@@ -25,9 +25,9 @@ class ExecutePolicy(Node):
         ros_domain_id = os.getenv("ROS_DOMAIN_ID", "0")
         try:
             if int(ros_domain_id) < 10:
-                ros_domain_id = "0" + str(int(ros_domain_id))
+                ros_domain_id = "/tb0" + str(int(ros_domain_id))
             else:
-                ros_domain_id = str(int(ros_domain_id))
+                ros_domain_id = "/tb" + str(int(ros_domain_id))
         except Exception:
             ros_domain_id = "00"
         self.get_logger().info(f'ROS_DOMAIN_ID: {ros_domain_id}')
