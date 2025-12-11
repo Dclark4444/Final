@@ -60,6 +60,7 @@ class ExecutePolicy(Node):
 
     def callback(self, msg):
         try:
+            self.get_logger().info(f"0")
             frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
             self.get_logger().info(f"1")
             img = cv2.resize(frame, IMG_SIZE)
