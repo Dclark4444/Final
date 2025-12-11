@@ -43,6 +43,7 @@ class ExecutePolicy(Node):
         self.get_logger().info("Model loaded.")
 
         self.bridge = CvBridge()
+        self.image = None
 
         self.subscription = self.create_subscription(
             Image,
@@ -61,10 +62,11 @@ class ExecutePolicy(Node):
 
         img = cv2.resize(frame, IMG_SIZE)
         img = img.astype(np.float32) / 255.0
-        img = np.expand_dims(img, axis=0)
+        self.image = np.expand_dims(img, axis=0)
 
+    def predict(self):
         self.get_logger().info('pre-prediction')
-        pred = self.model.predict(img, verbose=0)[0][0]
+        pred = self.model.predict(self.image, verbose=0)[0][0]
         self.get_logger().info('post-prediction')
 
         self.label = "RIGHT" if pred >= 0.5 else "LEFT"
@@ -85,8 +87,9 @@ def main(args=None):
     node = ExecutePolicy()
     dual_going = True
     while dual_going:
-        while node.label == None:
+        while node.label is None:
             rclpy.spin_once(node)
+            node.predict()
             node.get_logger().warn('SEARCHING')
         node.execute()
         node.label = None
