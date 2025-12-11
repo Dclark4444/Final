@@ -4,8 +4,9 @@ import rclpy
 from ament_index_python.packages import get_package_share_directory 
 from rclpy.node import Node
 
-from AttackDefend_interfaces.msg import Reward
-from AttackDefend_interfaces.msg import Action 
+import attackdefend_interfaces
+from attackdefend_interfaces.msg import Reward
+from attackdefend_interfaces.msg import Action 
 
 
 

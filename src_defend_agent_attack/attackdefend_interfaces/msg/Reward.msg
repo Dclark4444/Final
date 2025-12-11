@@ -1,1 +1,1 @@
-list(int) reward
+int32[] reward

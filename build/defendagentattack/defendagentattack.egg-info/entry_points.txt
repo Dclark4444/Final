@@ -1,0 +1,6 @@
+[console_scripts]
+fight-now = defendagentattack.fightnow:main
+multi-agent = defendagentattack.multiagent:main
+reward-simulate = defendagentattack.reward_simulator:main
+rl-move = defendagentattack.rl_agent_nodes:main
+

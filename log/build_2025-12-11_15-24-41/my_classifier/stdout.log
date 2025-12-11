@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing my_classifier.egg-info/PKG-INFO
+writing dependency_links to my_classifier.egg-info/dependency_links.txt
+writing entry points to my_classifier.egg-info/entry_points.txt
+writing requirements to my_classifier.egg-info/requires.txt
+writing top-level names to my_classifier.egg-info/top_level.txt
+reading manifest file 'my_classifier.egg-info/SOURCES.txt'
+writing manifest file 'my_classifier.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my-classifier.egg-link (link to .)
+Installing execute-policy script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+Installing record-images script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+Installing sin script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+
+Installed /home/hanimn/intro_robo_ws/src/Final/build/my_classifier
+running symlink_data

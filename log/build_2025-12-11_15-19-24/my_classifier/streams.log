@@ -1,0 +1,26 @@
+[1.790s] Invoking command in '/home/hanimn/intro_robo_ws/src/Final/build/my_classifier': PYTHONPATH=/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build --no-deps symlink_data
+[2.235s] running develop
+[2.695s] running egg_info
+[2.695s] creating my_classifier.egg-info
+[2.698s] writing my_classifier.egg-info/PKG-INFO
+[2.707s] writing dependency_links to my_classifier.egg-info/dependency_links.txt
+[2.711s] writing entry points to my_classifier.egg-info/entry_points.txt
+[2.714s] writing requirements to my_classifier.egg-info/requires.txt
+[2.717s] writing top-level names to my_classifier.egg-info/top_level.txt
+[2.721s] writing manifest file 'my_classifier.egg-info/SOURCES.txt'
+[2.732s] reading manifest file 'my_classifier.egg-info/SOURCES.txt'
+[2.734s] writing manifest file 'my_classifier.egg-info/SOURCES.txt'
+[2.741s] running build_ext
+[2.741s] Creating /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my-classifier.egg-link (link to .)
+[2.751s] Installing execute-policy script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+[2.760s] Installing record-images script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+[2.763s] Installing sin script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+[2.768s] 
+[2.768s] Installed /home/hanimn/intro_robo_ws/src/Final/build/my_classifier
+[2.769s] running symlink_data
+[2.769s] creating /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/ament_index
+[2.770s] creating /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/ament_index/resource_index
+[2.774s] creating /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/ament_index/resource_index/packages
+[2.774s] symbolically linking /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/resource/my_classifier -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/ament_index/resource_index/packages
+[2.775s] symbolically linking /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/package.xml -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier
+[2.886s] Invoked command in '/home/hanimn/intro_robo_ws/src/Final/build/my_classifier' returned '0': PYTHONPATH=/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build --no-deps symlink_data
