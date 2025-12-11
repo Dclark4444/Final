@@ -22,7 +22,7 @@ setup(
         'console_scripts': [
 		'record-images = my_classifier.record_images:main',
 		'execute-policy = my_classifier.execute_policy:main',
-        ''
+        'sin = my_classifier.sin:main',
         ],
     },
 )
