@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>attackdefend_interfaces</name>
+  <version>0.0.0</version>
+  <description>Interface definitions for defendagentattack</description>
+  <maintainer email="hanimn@uchicago.edu">hanimn</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Build dependencies for interface generation -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <!-- Optional test dependencies -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

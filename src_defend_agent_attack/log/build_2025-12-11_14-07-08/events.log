@@ -1,0 +1,21 @@
+[0.000000] (-) TimerEvent: {}
+[0.000135] (attackdefend_interfaces) JobQueued: {'identifier': 'attackdefend_interfaces', 'dependencies': OrderedDict()}
+[0.000162] (defendagentattack) JobQueued: {'identifier': 'defendagentattack', 'dependencies': OrderedDict()}
+[0.000177] (attackdefend_interfaces) JobStarted: {'identifier': 'attackdefend_interfaces'}
+[0.046045] (defendagentattack) JobStarted: {'identifier': 'defendagentattack'}
+[0.099821] (-) TimerEvent: {}
+[0.200897] (-) TimerEvent: {}
+[0.301222] (-) TimerEvent: {}
+[0.402968] (-) TimerEvent: {}
+[0.503292] (-) TimerEvent: {}
+[0.603582] (-) TimerEvent: {}
+[0.703838] (-) TimerEvent: {}
+[0.713992] (attackdefend_interfaces) StderrLine: {'line': b'Traceback (most recent call last):\n  File "/usr/lib/python3/dist-packages/colcon_core/executor/__init__.py", line 91, in __call__\n    rc = await self.task(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/__init__.py", line 93, in __call__\n    return await task_method(*args, **kwargs)\n  File "/usr/lib/python3/dist-packages/colcon_ros/task/ament_python/build.py", line 102, in build\n    return await extension.build(additional_hooks=additional_hooks)\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 96, in build\n    available_commands = await self._get_available_commands(\n  File "/usr/lib/python3/dist-packages/colcon_core/task/python/build.py", line 194, in _get_available_commands\n    output = await check_output(\n  File "/usr/lib/python3/dist-packages/colcon_core/subprocess.py", line 129, in check_output\n    assert not rc, f\'Expected {args} to pass: {stderr_data}\'\nAssertionError: Expected [\'/usr/bin/python3\', \'-W\', \'ignore:setup.py install is deprecated\', \'-W\', \'ignore:easy_install command is deprecated\', \'setup.py\', \'--help-commands\'] to pass: /usr/bin/python3: can\'t open file \'/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/attackdefend_interfaces/setup.py\': [Errno 2] No such file or directory\n\n'}
+[0.725796] (attackdefend_interfaces) JobEnded: {'identifier': 'attackdefend_interfaces', 'rc': 1}
+[0.803970] (-) TimerEvent: {}
+[0.904241] (-) TimerEvent: {}
+[1.004538] (-) TimerEvent: {}
+[1.104889] (-) TimerEvent: {}
+[1.205198] (-) TimerEvent: {}
+[1.282591] (defendagentattack) JobEnded: {'identifier': 'defendagentattack', 'rc': 'SIGINT'}
+[1.293076] (-) EventReactorShutdown: {}

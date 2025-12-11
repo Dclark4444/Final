@@ -1,0 +1,128 @@
+[0.181s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.182s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x72cf7398e860>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x72cf73ac4370>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x72cf73ac4370>>)
+[0.496s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.496s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.496s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.496s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.496s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.496s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.496s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.497s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.512s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extension 'ignore'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extension 'ignore_ament_install'
+[0.513s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extensions ['colcon_pkg']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extension 'colcon_pkg'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extensions ['colcon_meta']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extension 'colcon_meta'
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extensions ['ros']
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(attackdefend_interfaces) by extension 'ros'
+[0.515s] DEBUG:colcon.colcon_core.package_identification:Package 'attackdefend_interfaces' with type 'ros.ament_python' and name 'attackdefend_interfaces'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(defendagentattack) by extensions ['ignore', 'ignore_ament_install']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(defendagentattack) by extension 'ignore'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(defendagentattack) by extension 'ignore_ament_install'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(defendagentattack) by extensions ['colcon_pkg']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(defendagentattack) by extension 'colcon_pkg'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(defendagentattack) by extensions ['colcon_meta']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(defendagentattack) by extension 'colcon_meta'
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(defendagentattack) by extensions ['ros']
+[0.518s] Level 1:colcon.colcon_core.package_identification:_identify(defendagentattack) by extension 'ros'
+[0.518s] DEBUG:colcon.colcon_core.package_identification:Package 'defendagentattack' with type 'ros.ament_python' and name 'defendagentattack'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.520s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.521s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.521s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.521s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.521s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.521s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.537s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.538s] WARNING:colcon.colcon_core.prefix_path.colcon:The path '/home/hanimn/intro_robo_ws/src/Final/install' in the environment variable COLCON_PREFIX_PATH doesn't exist
+[0.552s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.580s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 21 installed packages in /home/hanimn/intro_robo_ws/install
+[0.582s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 452 installed packages in /opt/ros/humble
+[0.585s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.669s] Level 5:colcon.colcon_core.verb:set package 'attackdefend_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.669s] DEBUG:colcon.colcon_core.verb:Building package 'attackdefend_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/build/attackdefend_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/attackdefend_interfaces', 'merge_install': False, 'path': '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/attackdefend_interfaces', 'symlink_install': True, 'test_result_base': None}
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_args' from command line to 'None'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_target' from command line to 'None'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_clean_cache' from command line to 'False'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_clean_first' from command line to 'False'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'cmake_force_configure' from command line to 'False'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'ament_cmake_args' from command line to 'None'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'catkin_cmake_args' from command line to 'None'
+[0.670s] Level 5:colcon.colcon_core.verb:set package 'defendagentattack' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.670s] DEBUG:colcon.colcon_core.verb:Building package 'defendagentattack' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/build/defendagentattack', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/defendagentattack', 'merge_install': False, 'path': '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/defendagentattack', 'symlink_install': True, 'test_result_base': None}
+[0.670s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.671s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.671s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/attackdefend_interfaces' with build type 'ament_python'
+[0.671s] Level 1:colcon.colcon_core.shell:create_environment_hook('attackdefend_interfaces', 'ament_prefix_path')
+[0.674s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.674s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/attackdefend_interfaces/share/attackdefend_interfaces/hook/ament_prefix_path.ps1'
+[0.680s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/attackdefend_interfaces/share/attackdefend_interfaces/hook/ament_prefix_path.dsv'
+[0.685s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/attackdefend_interfaces/share/attackdefend_interfaces/hook/ament_prefix_path.sh'
+[0.691s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.691s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.712s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/defendagentattack' with build type 'ament_python'
+[0.713s] Level 1:colcon.colcon_core.shell:create_environment_hook('defendagentattack', 'ament_prefix_path')
+[0.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/defendagentattack/share/defendagentattack/hook/ament_prefix_path.ps1'
+[0.718s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/defendagentattack/share/defendagentattack/hook/ament_prefix_path.dsv'
+[0.725s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/defendagentattack/share/defendagentattack/hook/ament_prefix_path.sh'
+[0.730s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.730s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.762s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'attackdefend_interfaces' doesn't explicitly install a marker in the package index (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[0.765s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'attackdefend_interfaces' doesn't explicitly install the 'package.xml' file (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+[0.766s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/attackdefend_interfaces'
+[0.766s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.766s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.225s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/defendagentattack'
+[1.225s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.225s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.819s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[1.819s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[1.820s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with 'Expected ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', '--help-commands'] to pass: /usr/bin/python3: can't open file '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/attackdefend_interfaces/setup.py': [Errno 2] No such file or directory
+'
+[1.820s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[1.826s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[1.826s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[1.826s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[1.832s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[1.832s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/local_setup.ps1'
+[1.837s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/_local_setup_util_ps1.py'
+[1.842s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/setup.ps1'
+[1.856s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/local_setup.sh'
+[1.861s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/_local_setup_util_sh.py'
+[1.868s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/setup.sh'
+[1.884s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/local_setup.bash'
+[1.888s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/setup.bash'
+[1.904s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/local_setup.zsh'
+[1.909s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/hanimn/intro_robo_ws/src/Final/src_defend_agent_attack/install/setup.zsh'
