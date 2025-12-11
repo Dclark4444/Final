@@ -86,7 +86,7 @@ def main(args=None):
     dual_going = True
     while dual_going:
         while node.label == None:
-            rclpy.spin(node)
+            rclpy.spin_once(node)
             node.get_logger().warn('SEARCHING')
         node.execute()
         node.label = None
