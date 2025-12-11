@@ -86,8 +86,8 @@ def main(args=None):
     dual_going = True
     while dual_going:
         while node.label == None:
-            node.get_logger().warn('SEARCHING')
             rclpy.spin(node)
+            node.get_logger().warn('SEARCHING')
         node.execute()
         node.label = None
         if input('Did the balloon pop y/n?') == 'y':
