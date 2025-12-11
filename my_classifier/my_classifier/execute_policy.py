@@ -27,7 +27,7 @@ class ExecutePolicy(Node):
             self.model = tf.keras.models.load_model("defender.h5")
             self.action_move = Defense_move()
         else:
-            self.model = tf.keras.models.load_model("atacker.h5")
+            self.model = tf.keras.models.load_model("attacker.h5")
             self.action_move = Attack_move()
 
         self.get_logger().info("Model loaded.")
