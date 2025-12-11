@@ -100,7 +100,7 @@ def main(args=None):
     while dual_going:
         while node.label is None:
             node.get_logger().warn('SEARCHING 0')
-            rclpy.spin_once(node)
+            rclpy.spin_once(node, timeout_sec=0.1)
             node.get_logger().warn('SEARCHING 1')
             node.predict()
             node.get_logger().warn('SEARCHING 2')
