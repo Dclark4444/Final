@@ -1,5 +1,0 @@
-[console_scripts]
-execute-policy = my_classifier.execute_policy:main
-record-images = my_classifier.record_images:main
-sin = my_classifier.sin:main
-
