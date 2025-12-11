@@ -12,6 +12,8 @@ import time
 
 from my_classifier.attack_defend_nodes import Attack_move, Defense_move
 
+IMG_SIZE = (250, 250)
+
 TYPE = input("Press 1 to load defender, press 2 to load attacker ")
 if TYPE == '1':
     TYPE = 'Defense'
