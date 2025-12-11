@@ -4,7 +4,8 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
-
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 import random
 import tensorflow as tf
 import numpy as np
@@ -79,7 +80,8 @@ class ExecutePolicy(Node):
     def predict(self):
         pred = self.model.predict(self.image, verbose=0)[0][0]
 
-        self.label = "Right" if pred >= 0.5 else "Left"
+        pred = pred if pred >= 0.566 else 1 - pred
+        self.label = "Right" if pred <= 0.563 else "Left"
         self.confidence = pred if pred >= 0.5 else 1 - pred
 
         self.get_logger().info(f"Prediction: {self.label}   (confidence {self.confidence:.3f})")
@@ -103,11 +105,13 @@ def main(args=None):
     time.sleep(2)
     dual_going = True
     while dual_going:
-        while node.image is None:
-            node.get_logger().warn('SEARCHING')
-            rclpy.spin_once(node, timeout_sec=0.1)
+        rclpy.spin_once(node, timeout_sec=0.1)
+        if node.image is None:
+            while node.image is None:
+                node.get_logger().warn('SEARCHING')
+                rclpy.spin_once(node, timeout_sec=0.1)
         node.predict()
-        node.execute()
+        #node.execute()
         node.label = None
         if input('Did the balloon pop y/n?') == 'y':
             dual_going = False

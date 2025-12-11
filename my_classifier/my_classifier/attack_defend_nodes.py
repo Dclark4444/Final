@@ -25,9 +25,9 @@ class MovementNode(Node, ABC):
             else: 
                 node_name = 'defense_move_nn'
             super().__init__(node_name)
-        self.get_logger().info(f"I HAVE INITIALIZED")
+        # self.get_logger().info(f"I HAVE INITIALIZED")
         super().__init__(node_name)
-        self.get_logger().info(f"I HAVE INITIALIZED")
+        # self.get_logger().info(f"I HAVE INITIALIZED")
 
         # 2. Shared Data/RL parameters
         self.curr_at = None
@@ -45,7 +45,7 @@ class MovementNode(Node, ABC):
         except Exception:
             self.ros_domain_id = "00"
 
-        self.get_logger().info(f'ROS_DOMAIN_ID: {self.ros_domain_id}')
+        # self.get_logger().info(f'ROS_DOMAIN_ID: {self.ros_domain_id}')
 
         self.actions = {'Attack': {'Left', 'Right', 'Center'},
                         'Defense': {'Left', 'Right', 'Center'}}
@@ -109,7 +109,7 @@ class MovementNode(Node, ABC):
         self.joint_arm_pub.publish(arm_msg)
 
     def scan_callback(self, scan: LaserScan):  # reads scan images, only when action is performed.
-        self.get_logger().debug('LaserScan received')
+        # self.get_logger().debug('LaserScan received')
         scan_ranges = np.array(scan.ranges)
         num_points = len(scan_ranges)
 
@@ -120,7 +120,7 @@ class MovementNode(Node, ABC):
 
         valid = forward_slice[np.isfinite(forward_slice)]
         if len(valid) == 0:
-            self.get_logger().warn("No valid scan points in front.")
+            # self.get_logger().warn("No valid scan points in front.")
             return
 
         self.scan_dist = float(np.median(valid))  # forward distance
@@ -129,7 +129,7 @@ class MovementNode(Node, ABC):
 
         # first instance of 3.5 second run, go to the next action, after accesing state
         if elapsed > self.action_MIN_RUN_TIME:
-            self.get_logger().info("Action should have finished performing")
+            # self.get_logger().info("Action should have finished performing")
 
             if (self.scan_dist - self.desired_scan_dist) < 0.5:
                 rclpy.shutdown()  ## immediate shutdown if the robots are very close to eachother
@@ -148,8 +148,8 @@ class MovementNode(Node, ABC):
 
 
 class Attack_move(MovementNode):
-    def __init__(self):
-        super().__init__('attack_move_nn')
+    def __init__(self, agent):
+        super().__init__('attack_move_nn', agent)
 
         self.agent_id = 'Attack'
 
@@ -160,7 +160,7 @@ class Attack_move(MovementNode):
 
         self.first_arm_move = [0.30,0,0,0] #right movement 
 
-        self.arm_go_right = [0.530, 0.150, -0.25, -0.5] #this is going in the right direction 
+        self.arm_go_right = [0.530, 0.5, -0.25, -0.5] #this is going in the right direction 
 
         self.desired_angle = 60  ### DESIRED ANGLE IS THE ONLY THING TattacHAT CHANGED
         self.angvelocity = self.desired_angle / (self.action_MIN_RUN_TIME)
@@ -212,8 +212,8 @@ class Attack_move(MovementNode):
 
 
 class Defense_move(MovementNode):
-    def __init__(self):
-        super().__init__('defense_move_nn')
+    def __init__(self, agent):
+        super().__init__('defense_move_nn', agent)
 
         self.agent_id = 'Defense'
         self.action_MIN_RUN_TIME = 2  # seconds
