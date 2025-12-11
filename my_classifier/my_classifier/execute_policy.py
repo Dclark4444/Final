@@ -40,10 +40,10 @@ class ExecutePolicy(Node):
         # load correct NN and moves
         if TYPE == 'Defense':
             self.model = tf.keras.models.load_model("defender.h5")
-            self.action_move = Defense_move()
+            self.action_move = Defense_move(TYPE)
         else:
             self.model = tf.keras.models.load_model("attacker.h5")
-            self.action_move = Attack_move()
+            self.action_move = Attack_move(TYPE)
 
         self.get_logger().info("Model loaded.")
 
@@ -86,16 +86,13 @@ class ExecutePolicy(Node):
 
     def execute(self):
         # execute the action
-<<<<<<< Updated upstream
         # self.label is the action. -- pass the action in run_action
         self.get_logger().info("Executing policy: " + self.label)
         self.action_move.run_action(self.label)
-=======
->>>>>>> Stashed changes
 
       # self.label iw what the state of the robot its observings ===> Do an action based on the label. 
 
-        self.action_move.run_action(self.label) # given 'Left",Defense will guard left, Attacks left 
+        # self.action_move.run_action(self.label) # given 'Left",Defense will guard left, Attacks left 
         # given "Right, Defense wil lguard right, Attacks right 
 
 def main(args=None):
