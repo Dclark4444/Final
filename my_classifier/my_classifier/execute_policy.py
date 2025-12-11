@@ -9,8 +9,6 @@ import numpy as np
 
 from my_classifier.attack_defend_nodes import Attack_move, Defense_move
 
-TURTLE_BOT_ID = '/tb07'
-
 TYPE = input("Press 1 to load defender, press 2 to load attacker ")
 if TYPE == '1':
     TYPE = 'Defense'
@@ -21,6 +19,17 @@ else:
 class ExecutePolicy(Node):
     def __init__(self):
         super().__init__("execute_policy")
+
+        # get the ROS_DOMAIN_ID aka robot number
+        ros_domain_id = os.getenv("ROS_DOMAIN_ID", "0")
+        try:
+            if int(ros_domain_id) < 10:
+                ros_domain_id = "0" + str(int(ros_domain_id))
+            else:
+                ros_domain_id = str(int(ros_domain_id))
+        except Exception:
+            ros_domain_id = "00"
+        self.get_logger().info(f'ROS_DOMAIN_ID: {ros_domain_id}')
 
         # load correct NN and moves
         if TYPE == 'Defense':
@@ -36,7 +45,7 @@ class ExecutePolicy(Node):
 
         self.subscription = self.create_subscription(
             Image,
-            TURTLE_BOT_ID + "/camera/image_raw",
+            ros_domain_id + "/camera/image_raw",
             self.callback,
             10
         )
@@ -44,9 +53,7 @@ class ExecutePolicy(Node):
         self.label = None
         self.confidence = None
 
-        # HANIM PUT ARM SUBSCRIBER STUFF
-
-        self.actions = self.action_move.get_action()  # get the actions of the robot
+        self.actions = self.action_move.get_action()
 
     def callback(self, msg):
         frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")

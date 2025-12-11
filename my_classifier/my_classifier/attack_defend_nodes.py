@@ -147,7 +147,6 @@ class Attack_move(MovementNode):
         self.agent_id = 'Attack'
 
         # tie variables for performing actions (limit)
-        self.action_MIN_RUN_TIME = 2  # seconds
         self.start_time = None
 
         # self.step = "Accessing"

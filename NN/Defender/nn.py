@@ -2,14 +2,14 @@ import tensorflow as tf
 from tensorflow.keras import layers, models
 import pathlib
 
-BATCH_SIZE = 8
+BATCH_SIZE = 6
 IMG_SIZE = (250, 250)
-EPOCHS = 12
+EPOCHS = 20
 
 train_ds = tf.keras.utils.image_dataset_from_directory(
     "data",
     labels = "inferred",
-    label_mode = "binary",
+    label_mode = "categorical",
     color_mode = "rgb",
     batch_size = BATCH_SIZE,
     image_size = IMG_SIZE,
@@ -23,7 +23,7 @@ train_ds = train_ds.prefetch(buffer_size = tf.data.AUTOTUNE)
 val_ds = tf.keras.utils.image_dataset_from_directory(
     pathlib.Path("data"),
     labels = "inferred",
-    label_mode = "binary",
+    label_mode = "categorical",
     batch_size = BATCH_SIZE,
     image_size = IMG_SIZE,
     shuffle = True,
@@ -46,8 +46,8 @@ model = models.Sequential([
 ])
 
 model.compile(
-    optimizer = 'adam',
-    loss = 'binary_crossentropy',
+    optimizer = 'adamW',
+    loss = 'mean_squared_error',
     metrics = ['accuracy']
 )
 
