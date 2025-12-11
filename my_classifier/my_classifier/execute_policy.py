@@ -86,7 +86,7 @@ class ExecutePolicy(Node):
         self.label = "RIGHT" if pred >= 0.5 else "LEFT"
         self.confidence = pred if pred >= 0.5 else 1 - pred
 
-        self.get_logger().info(f"Prediction: {label}   (confidence {confidence:.3f})")
+        self.get_logger().info(f"Prediction: {self.label}   (confidence {self.confidence:.3f})")
 
     def execute(self):
         # execute the action
