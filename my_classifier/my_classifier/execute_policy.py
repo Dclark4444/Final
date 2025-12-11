@@ -45,7 +45,7 @@ class ExecutePolicy(Node):
         self.bridge = CvBridge()
         self.image = None
 
-        self.subscription = self.create_subscription(
+        self.camera = self.create_subscription(
             Image,
             ros_domain_id + "/camera/image_raw",
             self.callback,
@@ -59,11 +59,15 @@ class ExecutePolicy(Node):
         self.get_logger().info('completed init. process')
 
     def callback(self, msg):
-        frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
+        try:
+            frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
 
-        img = cv2.resize(frame, IMG_SIZE)
-        img = img.astype(np.float32) / 255.0
-        self.image = np.expand_dims(img, axis=0)
+            img = cv2.resize(frame, IMG_SIZE)
+            img = img.astype(np.float32) / 255.0
+            self.image = np.expand_dims(img, axis=0)
+        except:
+            self.get_logger().info(f"Camera could not be read")
+            self.image = None
 
     def predict(self):
         self.get_logger().info('pre-prediction')
