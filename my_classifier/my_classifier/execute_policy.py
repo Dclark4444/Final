@@ -68,20 +68,15 @@ class ExecutePolicy(Node):
             frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
             if frame is None:
                 self.get_logger().info(f"frame failed")
-            self.get_logger().info(f"1")
             img = cv2.resize(frame, IMG_SIZE)
-            self.get_logger().info(f"2")
             img = img.astype(np.float32) / 255.0
-            self.get_logger().info(f"3")
             self.image = np.expand_dims(img, axis=0)
         except:
             self.get_logger().info(f"Camera could not be read")
             self.image = None
 
     def predict(self):
-        self.get_logger().info('pre-prediction')
         pred = self.model.predict(self.image, verbose=0)[0][0]
-        self.get_logger().info('post-prediction')
 
         self.label = "RIGHT" if pred >= 0.5 else "LEFT"
         self.confidence = pred if pred >= 0.5 else 1 - pred
@@ -91,6 +86,7 @@ class ExecutePolicy(Node):
     def execute(self):
         # execute the action
         # self.label is the action. -- pass the action in run_action
+        self.get_logger().info("Executing policy: " + self.label)
         self.action_move.run_action(self.label)
 
 
