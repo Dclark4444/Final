@@ -20,6 +20,7 @@ class MovementNode(Node, ABC):
 
     def __init__(self, node_name):
         super().__init__(node_name)
+        self.get_logger().info(f"I HAVE INITIALIZED")
 
         # 2. Shared Data/RL parameters
         self.curr_at = None
