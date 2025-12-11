@@ -18,7 +18,14 @@ from omx_cpp_interface.msg import ArmGripperPosition, ArmJointAngles
 class MovementNode(Node, ABC):
     """ Superclass containing all shared attributes, initializations, and helper methods. """
 
-    def __init__(self, node_name):
+    def __init__(self, agent, node_name=None):
+        if node_name == None: 
+            if agent == "Attack":
+                node_name = 'attack_move_nn'
+            else: 
+                node_name = 'defense_move_nn'
+            super().__init__(node_name)
+        self.get_logger().info(f"I HAVE INITIALIZED")
         super().__init__(node_name)
         self.get_logger().info(f"I HAVE INITIALIZED")
 
