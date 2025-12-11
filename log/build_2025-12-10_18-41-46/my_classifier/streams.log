@@ -1,0 +1,44 @@
+[1.204s] Invoking command in '/home/hanimn/intro_robo_ws/src/Final/my_classifier': PYTHONPATH=/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_classifier build --build-base /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build install --record /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/install.log --single-version-externally-managed install_data
+[1.619s] running egg_info
+[1.620s] creating ../build/my_classifier/my_classifier.egg-info
+[1.622s] writing ../build/my_classifier/my_classifier.egg-info/PKG-INFO
+[1.630s] writing dependency_links to ../build/my_classifier/my_classifier.egg-info/dependency_links.txt
+[1.635s] writing entry points to ../build/my_classifier/my_classifier.egg-info/entry_points.txt
+[1.638s] writing requirements to ../build/my_classifier/my_classifier.egg-info/requires.txt
+[1.641s] writing top-level names to ../build/my_classifier/my_classifier.egg-info/top_level.txt
+[1.647s] writing manifest file '../build/my_classifier/my_classifier.egg-info/SOURCES.txt'
+[1.652s] reading manifest file '../build/my_classifier/my_classifier.egg-info/SOURCES.txt'
+[1.655s] writing manifest file '../build/my_classifier/my_classifier.egg-info/SOURCES.txt'
+[1.658s] running build
+[1.658s] running build_py
+[1.659s] creating /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build
+[1.660s] creating /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib
+[1.662s] creating /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier
+[1.665s] copying my_classifier/execute_policy.py -> /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier
+[1.673s] copying my_classifier/__init__.py -> /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier
+[1.679s] copying my_classifier/record_images.py -> /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier
+[1.686s] copying my_classifier/attack_defend_nodes.py -> /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier
+[1.692s] running install
+[1.692s] running install_lib
+[1.695s] creating /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier
+[1.697s] copying /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier/record_images.py -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier
+[1.705s] copying /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier/execute_policy.py -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier
+[1.713s] copying /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier/__init__.py -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier
+[1.719s] copying /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier/attack_defend_nodes.py -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier
+[1.729s] byte-compiling /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/record_images.py to record_images.cpython-310.pyc
+[1.740s] byte-compiling /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/execute_policy.py to execute_policy.cpython-310.pyc
+[1.750s] byte-compiling /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/__init__.py to __init__.cpython-310.pyc
+[1.758s] byte-compiling /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/attack_defend_nodes.py to attack_defend_nodes.cpython-310.pyc
+[1.767s] running install_data
+[1.767s] creating /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/ament_index
+[1.768s] creating /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/ament_index/resource_index
+[1.770s] creating /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/ament_index/resource_index/packages
+[1.772s] copying resource/my_classifier -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/ament_index/resource_index/packages
+[1.778s] copying package.xml -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/share/my_classifier
+[1.783s] running install_egg_info
+[1.786s] Copying ../build/my_classifier/my_classifier.egg-info to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info
+[1.841s] running install_scripts
+[1.862s] Installing execute-policy script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+[1.869s] Installing record-images script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+[1.877s] writing list of installed files to '/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/install.log'
+[1.900s] Invoked command in '/home/hanimn/intro_robo_ws/src/Final/my_classifier' returned '0': PYTHONPATH=/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_classifier build --build-base /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build install --record /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/install.log --single-version-externally-managed install_data

@@ -1,0 +1,26 @@
+running egg_info
+writing ../build/my_classifier/my_classifier.egg-info/PKG-INFO
+writing dependency_links to ../build/my_classifier/my_classifier.egg-info/dependency_links.txt
+writing entry points to ../build/my_classifier/my_classifier.egg-info/entry_points.txt
+writing requirements to ../build/my_classifier/my_classifier.egg-info/requires.txt
+writing top-level names to ../build/my_classifier/my_classifier.egg-info/top_level.txt
+reading manifest file '../build/my_classifier/my_classifier.egg-info/SOURCES.txt'
+writing manifest file '../build/my_classifier/my_classifier.egg-info/SOURCES.txt'
+running build
+running build_py
+copying my_classifier/execute_policy.py -> /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier
+copying my_classifier/attack_defend_nodes.py -> /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier
+running install
+running install_lib
+copying /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier/execute_policy.py -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier
+copying /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier/attack_defend_nodes.py -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier
+byte-compiling /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/execute_policy.py to execute_policy.cpython-310.pyc
+byte-compiling /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/attack_defend_nodes.py to attack_defend_nodes.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../build/my_classifier/my_classifier.egg-info to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info
+running install_scripts
+Installing execute-policy script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+Installing record-images script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+writing list of installed files to '/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/install.log'

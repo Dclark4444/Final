@@ -1,0 +1,33 @@
+[1.191s] Invoking command in '/home/hanimn/intro_robo_ws/src/Final/my_classifier': PYTHONPATH=/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_classifier build --build-base /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build install --record /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/install.log --single-version-externally-managed install_data
+[1.613s] running egg_info
+[1.615s] writing ../build/my_classifier/my_classifier.egg-info/PKG-INFO
+[1.622s] writing dependency_links to ../build/my_classifier/my_classifier.egg-info/dependency_links.txt
+[1.627s] writing entry points to ../build/my_classifier/my_classifier.egg-info/entry_points.txt
+[1.632s] writing requirements to ../build/my_classifier/my_classifier.egg-info/requires.txt
+[1.638s] writing top-level names to ../build/my_classifier/my_classifier.egg-info/top_level.txt
+[1.648s] reading manifest file '../build/my_classifier/my_classifier.egg-info/SOURCES.txt'
+[1.651s] writing manifest file '../build/my_classifier/my_classifier.egg-info/SOURCES.txt'
+[1.655s] running build
+[1.655s] running build_py
+[1.657s] copying my_classifier/execute_policy.py -> /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier
+[1.666s] copying my_classifier/attack_defend_nodes.py -> /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier
+[1.674s] running install
+[1.674s] running install_lib
+[1.678s] copying /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier/execute_policy.py -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier
+[1.688s] copying /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build/lib/my_classifier/attack_defend_nodes.py -> /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier
+[1.699s] byte-compiling /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/execute_policy.py to execute_policy.cpython-310.pyc
+[1.702s]   File "/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/execute_policy.py", line 7
+[1.702s]     <<<<<<< Updated upstream
+[1.702s]     ^^
+[1.702s] SyntaxError: invalid syntax
+[1.702s] 
+[1.703s] byte-compiling /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/attack_defend_nodes.py to attack_defend_nodes.cpython-310.pyc
+[1.714s] running install_data
+[1.716s] running install_egg_info
+[1.718s] removing '/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info' (and everything under it)
+[1.731s] Copying ../build/my_classifier/my_classifier.egg-info to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier-0.0.0-py3.10.egg-info
+[1.785s] running install_scripts
+[1.806s] Installing execute-policy script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+[1.812s] Installing record-images script to /home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/my_classifier
+[1.818s] writing list of installed files to '/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/install.log'
+[1.842s] Invoked command in '/home/hanimn/intro_robo_ws/src/Final/my_classifier' returned '0': PYTHONPATH=/home/hanimn/intro_robo_ws/src/Final/build/my_classifier/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/my_classifier build --build-base /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/build install --record /home/hanimn/intro_robo_ws/src/Final/build/my_classifier/install.log --single-version-externally-managed install_data

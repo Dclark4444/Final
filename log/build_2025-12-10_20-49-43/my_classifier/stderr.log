@@ -1,0 +1,5 @@
+  File "/home/hanimn/intro_robo_ws/src/Final/install/my_classifier/lib/python3.10/site-packages/my_classifier/execute_policy.py", line 7
+    <<<<<<< Updated upstream
+    ^^
+SyntaxError: invalid syntax
+

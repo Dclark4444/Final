@@ -4,8 +4,11 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
-
-import random
+<<<<<<< Updated upstream
+import os
+=======
+import random 
+>>>>>>> Stashed changes
 import tensorflow as tf
 import numpy as np
 
