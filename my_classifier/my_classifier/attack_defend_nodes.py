@@ -39,8 +39,8 @@ class MovementNode(Node, ABC):
 
         self.get_logger().info(f'ROS_DOMAIN_ID: {self.ros_domain_id}')
 
-        self.actions = {'Attack': {'Left', 'Right'},
-                        'Defense': {'Left', 'Right'}}
+        self.actions = {'Attack': {'Left', 'Right', 'Center'},
+                        'Defense': {'Left', 'Right', 'Center'}}
 
         # 4. Shared Timing/Action Variables
         self.action_MIN_RUN_TIME = 3  # seconds  Move and reverse back
@@ -52,7 +52,6 @@ class MovementNode(Node, ABC):
         self.desired_scan_dist = 0.3
 
         # diff variables for Attack and Defend
-        self.G_R_arm_pose = []
         self.desired_angle = 0.0
         self.angvelocity = 0.0
         self.desired_dist = 0.0
@@ -94,7 +93,7 @@ class MovementNode(Node, ABC):
         self.movement_publisher.publish(twist_msg)
 
     def arm_move(self, left_joint_1, pose):
-        # if joint angle negative ==== Guarding left
+        # if joint angle negative ==== Guarding left ==> moving Left 
         x = -1 if left_joint_1 else 1
         arm_msg = ArmJointAngles()
         arm_msg.joint1 = x * pose[0]
@@ -151,7 +150,9 @@ class Attack_move(MovementNode):
 
         # self.step = "Accessing"
 
-        self.arm_going_left = [0.530, 0, 0.320, 0]  # GIve this values
+        self.first_arm_move = [0.30,0,0,0] #right movement 
+
+        self.arm_go_right = [0.530, 0.150, -0.25, -0.5] #this is going in the right direction 
 
         self.desired_angle = 60  ### DESIRED ANGLE IS THE ONLY THING TattacHAT CHANGED
         self.angvelocity = self.desired_angle / (self.action_MIN_RUN_TIME)
@@ -176,16 +177,30 @@ class Attack_move(MovementNode):
             else:
                 self.curr_at = 'Left'
 
-        if self.curr_at == 'Left':
-            # complete 30 dtegree movement in 2.0 seconds # negative velocity when going left
-            self.body_movement(neg_velo=True,
-                               forward=True)  # move (+ velocity)  and turn with a ngative angular velocity
-            self.arm_move(False, self.A_R_arm_pose)  # move arm to teh right of the robot
+# for attack movement: Turn arm op
 
-        if self.curr_at == 'Right':
-            self.body_movement(neg_velo=False,
+
+        if self.curr_at == 'Left':
+            self.arm_move(False, self.first_arm_move)
+            time.sleep(0.05)
+
+            self.body_movement(neg_velo=False, # turn in right 
+                               forward=True)  # move (+ velocity)  and turn with a ngative angular velocity
+            self.arm_move(False, self.arm_go_right) #ve arm down to thte left 
+
+
+       
+        if self.curr_at == 'Right': # most likely not the same movement for reversed 
+
+            # turn arm left, 
+            self.arm_move(True , self.first_arm_move)
+            time.sleep(0.05)
+
+# turn towards the left and move forward 
+            self.body_movement(neg_velo=True,
                                forward=True)  # move ( + velocity) and turn with a positive angular velocity
-            self.arm_move(True, self.A_R_arm_pose)  # move arm down to thte right
+            
+            self.arm_move(True, self.arm_go_right) #ve arm down to thte left 
 
 
 class Defense_move(MovementNode):
