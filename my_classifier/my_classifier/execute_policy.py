@@ -56,7 +56,7 @@ class ExecutePolicy(Node):
         self.confidence = None
 
         self.actions = self.action_move.get_action()
-        node.get_logger().info('completed inti process')
+        self.get_logger().info('completed init. process')
 
     def callback(self, msg):
         frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
