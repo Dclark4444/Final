@@ -49,7 +49,7 @@ class ExecutePolicy(Node):
 
         self.camera = self.create_subscription(
             Image,
-            ros_domain_id + "/camera/image_raw",
+            ros_domain_id + "oakd/rgb/preview/image_raw",
             self.callback,
             10
         )
