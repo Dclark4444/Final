@@ -122,3 +122,5 @@ def main(args=None):
         if input() == "l":
             node.attack("left")
         else:
+            node.attack("right")
+    
