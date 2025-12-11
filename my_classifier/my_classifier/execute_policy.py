@@ -8,6 +8,8 @@ import os
 import tensorflow as tf
 import numpy as np
 
+import time
+
 from my_classifier.attack_defend_nodes import Attack_move, Defense_move
 
 TYPE = input("Press 1 to load defender, press 2 to load attacker ")
@@ -93,6 +95,7 @@ def main(args=None):
     # player = sys.argv[1:] # Attack (A), Defend (D)
     # node = ExecuteOptimal(player)
     node = ExecutePolicy()
+    time.sleep(2)
     dual_going = True
     while dual_going:
         while node.label is None:
