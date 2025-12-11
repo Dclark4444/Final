@@ -98,12 +98,10 @@ def main(args=None):
     time.sleep(2)
     dual_going = True
     while dual_going:
-        while node.label is None:
-            node.get_logger().warn('SEARCHING 0')
+        while node.image is None:
+            node.get_logger().warn('SEARCHING')
             rclpy.spin_once(node, timeout_sec=0.1)
-            node.get_logger().warn('SEARCHING 1')
-            node.predict()
-            node.get_logger().warn('SEARCHING 2')
+        node.predict()
         node.execute()
         node.label = None
         if input('Did the balloon pop y/n?') == 'y':
