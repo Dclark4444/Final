@@ -76,34 +76,6 @@ class ExecuteOptimal(Node):
         self.q_matrix = np.loadtxt(matrix_path) # np array of q_matrix 
         self.get_logger().info(f'Loaded RL_matrix')
 
-        # set up ROS / OpenCV bridge
-        self.bridge = cv_bridge.CvBridge()
-
-        #Topics 
-        cmd_vel_topic = f"/tb{ros_domain_id}/cmd_vel"
-        compress_image_topic = f'/tb{self.ros_domain_id}/oakd/rgb/preview/image_raw/compressed'
-        scan_topic = f'/tb{self.ros_domain_id}/scan'
-        arm_grip = f'/tb{ros_domain_id}/target_gripper_position'
-        arm_angles = f'/tb{ros_domain_id}/target_joint_angles'
-
-
-        # publishing
-        self.joint_arm_pub = self.create_publisher(ArmJointAngles, arm_angles, 10)
-        self.gripper_pub = self.create_publisher(ArmGripperPosition, arm_grip, 10)
-        self.movement_publisher =  self.create_publisher(Twist, cmd_vel_topic, 10)
-
-
-        # # subscriptions 
-        # self.image_sub = self.create_subscription(CompressedImage, 
-        #     compress_image_topic, 
-        #     self.image_callback, #trigger image for robot to look around (movement)
-        #     10
-        # )
-
-        # self.scan_sub = self.create_subscription(LaserScan, scan_topic, 
-        #     self.scan_callback,10)
-        
-
         timer_period =  0.5
         # generating policy loop, can adjust how often function is being called
         self.timer = self.create_timer(timer_period, self.policy_loop)
@@ -125,6 +97,7 @@ class ExecuteOptimal(Node):
 
 
     def get_action(self): 
+        """Given a Learned Matrix, get the most beneficial ation for agent"""
         curr_state = self.curr_state_idx # get the current state action 
         # agent = self.players[self.player_idx] # get the agent id 
         agent_qs = self.RL_matrix[curr_state, :, self.player_idx]
@@ -134,36 +107,42 @@ class ExecuteOptimal(Node):
 
 
     def reading_file(self):
+        """Reading a text file is essential for communication between the robots. Each time an 
+        agent selects an action, both robots write to the file so they can keep track of the joint actions"""
 
         curr_state = self.curr_state_idx # get the current state index 
-        player = self.players[self.player_idx] 
+        player = self.players[self.player_idx] # whos the player 
 
-        if self.joint_action_idx != None:  # only read file if i have t gotten a joint action_IDX 
+        if self.joint_action_idx != None:  
+            # have already received joint_action_idx and am processing it 
             return 
 
         filesize = os.path.getsize(self.fourth_wall_path)
-        if filesize == 1: 
-            pos_action = np.loadtxt(self.fourth_wall_path)
+        if filesize == 1:  # if there's only one inut, that means Defender hasn't written in 
+            pos_action = np.loadtxt(self.fourth_wall_path) # output of the txt file 
 
-        if filesize > 1:
+        if filesize > 1: #if there are more than one, both robots have written in, and joint_action can be extracted 
 
     #   can find the joint action from finding the joint action in the joint_action list, and pass that shit 
             self.joint_action_idx = np.where(self.actions == pos_action) # get the joint action index 
 
-    # detete the joint actions once saved 
+    # detete from file once the joint actions once saved 
             np.savetxt(self.fourth_wall_path, np.array([])) 
         
         else: 
             pos_action = np.array([])
         
-        action_idx = None 
+        
+        action_idx = None  # set action idx as none, so player 1 can modify 
 
         if player == "Attack":
-            if np.isnan(pos_action[self.player_idx]):
-                self.get_action()
+            if np.isnan(pos_action[self.player_idx]): 
+                action_idx = self.get_action() 
+                #it chooses an action only if it hasn’t already chosen one.
         else: 
             if not np.isnan(pos_action[0]):
-                self.get_action()
+                action_idx = self.get_action() 
+             # chooses an action only after the attacker has chosen theirs
         
         pos_action[self.player_idx] = action_idx  # update the next possible action that could be performed 
         np.savetxt(self.fourth_wall_path, pos_action, fmt="%d") # need to clear this every time an action is performed 
@@ -171,9 +150,10 @@ class ExecuteOptimal(Node):
     
 
     def policy_loop(self):
+        """Executes the policy learned by MARL"""
         player = self.players[self.player_idx]
 
-        if self.joint_action_idx is None: # keep reading the file 
+        if self.joint_action_idx is None: # keep reading the file until joint_action is none 
             self.reading_file()
             # perform the action 
 
@@ -181,10 +161,10 @@ class ExecuteOptimal(Node):
             curr_at_player   = self.actions[self.joint_action_idx][self.player_idx]
             # RUN THE MOVEMENT NODE STUFF HERE ---> JUST RUN ACTION(action), can be initilized with the action 
 
-            
-            if player == "Attack": # run the movement upon initilization ---> hopefully continues until its told to stop 
-                self.move_action = Attack_move(curr_at_player)
-            # if ther eis somethign in there, get the action for your robot and move it 
+            # get the player-specific action 
+
+            if player == "Attack": # run the movement upon initilization 
+                self.move_action = Attack_move(curr_at_player) # initialized with an action 
             else: 
                 self.move_action = Defend_move(curr_at_player)
 
@@ -202,7 +182,8 @@ class ExecuteOptimal(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    TYPE = input("Press 1 to load defender, press 0 to load attacker ") ## input the player 
+    TYPE = input("Press 1 to load defender, press 0 to load attacker ") 
+    ## User inputs the player associated with ros domain
     if TYPE == '1':
         TYPE = 'Defense'
     else:

@@ -5,12 +5,10 @@ from ament_index_python.packages import get_package_share_directory
 from rclpy.node import Node
 
 import attackdefend_interfaces
-from attackdefend_interfaces.msg import Reward
-from attackdefend_interfaces.msg import Action 
+from attackdefend_interfaces.msg import Reward # can't import for some reason 
+from attackdefend_interfaces.msg import Action # can't import for some reason 
 
 
-
-## WRITING TO FILE AND READING FILE TO OBTAIN ACTION AND THEN ReTURN 
 
 class LearningMatrix(Node):
     def __init__(self):
@@ -39,14 +37,14 @@ class LearningMatrix(Node):
         self.goal_attack = [[2,2,0,0], [1,2,0,0]] # when it has attacked when robot is no turned to it or shield is not in the way 
         self.goal_defend = [[2,2,2,0],[2,2,0,2], [1,2,0,1], [1,2,1,0]] #  when it has successfully blocked the attack  --- > turned int eh same direction and arm in direction of attack 
 
+        # allows simple conversion of the state --> action 
         self.state_to_act = {0: [0,1,2], 1: [0,3,4]}
 
-        # keep track of the iteration number
-        self.iteration_num = 0
-
+        # # keep track of the iteration number
+        # self.iteration_num = 0
 
         # initialized state 
-        self.curr_state = self.states[0]     #gett
+        self.curr_state = self.states[0]  # get home -home state 
 
         # get the ROS_DOMAIN_ID aka robot number and format as two digits
         ros_domain_id = os.getenv("ROS_DOMAIN_ID", "0")
@@ -67,8 +65,6 @@ class LearningMatrix(Node):
             self.send_reward,
             10,
         ) 
-        # subscribe to actions from multi-agent, 
-        # should recieve actions of both attackre and defender 
 
         # set up the reward publisher
         reward_topic = f"/tb{ros_domain_id}/multiagent/reward"
@@ -79,12 +75,16 @@ class LearningMatrix(Node):
         """Maps actions to states"""
         
         if act_for_play > 2:  
-            idx_for_st = 1
+            idx_for_st = 1 # ARM actions
         else:
-            idx_for_st = 0 
+            idx_for_st = 0 # BODY actions 
+
+        # get actions for specific part of the agent, then get the index for all the actions of that body part 
+        # mpas to specific action 
         
         find_act = [i for i, state in enumerate(self.state_to_act[idx_for_st]) if state.tolist() == self.state_to_act[idx_for_st]][0]
-        # get value for the index that changes 
+        # get value for the index that changes. 
+        # actions is a 1D array and state is a 2 item array for an agent. 
 
         curr_player_st[idx_for_st] = find_act
 
@@ -92,15 +92,11 @@ class LearningMatrix(Node):
 
 
     def send_reward(self, msg:Action): 
-# reward function for Reinforcement Learning 
-        # state_to_act = {0: [0,1,2], 1: [0,3,4]}
+        """Triggered by Action being published by Multiagent, Reward function for RL"""
+        # state_to_act = {0: [0,1,2], 1: [0,3,4]} (state to action mapping)
 
         r_A  = self.default 
-        r_D = self.default
-
-
-        # load message (logger)
-        self.get_logger().info(f'Recieved action: robot_object = {msg.action_id}')
+        r_D = self.default # set default rewards 
 
 
         # Determine the next joint state based on action (received action)
@@ -108,21 +104,23 @@ class LearningMatrix(Node):
         D_cur_st = self.curr_state[2:4]
 
 
-        a_act = msg.action_id[0] # ok if the action here is  3 --> 
+        a_act = msg.action_id[0] # get agetn-specific action 
         d_act = msg.action_id[1]
 
+
+        # use hlepfer function to map to the next state of the agent 
         a_state = self.helper_val(A_cur_st, a_act)
         d_state = self.helper_val(D_cur_st, d_act)
 
-        next_st = a_state + d_state
+        next_st = a_state + d_state # combine the agent-specific states, to create a joint state
 
         # attacker goal checl
         home_st = [0,0,0,0]
         if self.curr_state != home_st and next_st == home_st: # tiny reward for resetting to home 
             r_A += self.safe
             r_D += self.safe 
-        if next_st in self.goal_attack:
-            r_A += self.attack_reward
+        if next_st in self.goal_attack: # if we have reached a state that benefits Attacker 
+            r_A += self.attack_reward 
             r_D += self.defend_damn
 
         elif next_st in self.goal_defend: # defender goal check 
@@ -133,7 +131,7 @@ class LearningMatrix(Node):
         joint_reward = [r_A, r_D]
 
 
-        # update == =and publish
+        # update == and publish message 
         reward_msg = Reward 
         reward_msg.reward = joint_reward
         self.reward_pub.publish(reward_msg)
