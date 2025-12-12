@@ -10,6 +10,13 @@ For the neural network, we are required to train on labeled data, essentially im
 Accuracy can be tricky to read, and too good of accuracy is more than likely overfitting, see below; however, we achieved a 100% accuracy for the attacker NN and for the defender NN. It should be noted here the attacker was a binary classifier, left or right, and the defender had three classes which is much more difficult. These scores also got a 100% validation score, which essentially means if we rerun the data in a different order it tests if how similar of a score we get to test for overfitting, achieving 100% means it's unlikely that there was overfitting, but I heavily doubt that, anecdotal accuracy is explained below. 
 In reinforcement learning, it is necessary to define the states and actions, allowing the system to learn a sequence of actions that lead to the desired goal state(s). With clearly defined states and actions for the robot, both robots were trained to select action sequences that guided them toward achieving their goal states (successful block or attack).
 
+General Idea of the “Dual”
+An attacker and a defender robot would be using their independent classifiers to detect their enemies moves and react accordingly. The attacker is trying to pop the balloon on the back of the defender with its 3D printed sword and the defender is trying to prevent this by blocking with their 3D printed shield. The goal of the attacker is to finish the dual as quick as possible, and the defender is trying to prolong the dual as long as possible.
+
+
+The Armaments
+See PDF named “Armerents.pdf” for a collection of the CAD drawings and actual printed armaments. 
+
 
 System Architecture: 
 The system implements a simulated robotic environment in which attack and defense agents interact in a competitive scenario. The architecture relies heavily on ROS2 publish/subscribe mechanisms to enable real-time communication between nodes. It should be noted two different systems are required, one to publish to the defender and one to publish to the attacker.
