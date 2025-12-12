@@ -1,3 +1,4 @@
+#all the imports
 import rclpy
 from rclpy.node import Node
 
@@ -14,8 +15,10 @@ import time
 
 from my_classifier.attack_defend_nodes import Attack_move, Defense_move
 
+#Image size of turtlebot camera frames
 IMG_SIZE = (250, 250)
 
+#Code is generalized to be the same for defender and attacker, just needs to know which model and actions to load
 TYPE = input("Press 1 to load defender, press 2 to load attacker ")
 if TYPE == '1':
     TYPE = 'Defense'
@@ -51,6 +54,7 @@ class ExecutePolicy(Node):
         self.bridge = CvBridge()
         self.image = None
 
+        #subscription to read the camera input
         self.camera = self.create_subscription(
             Image,
             ros_domain_id + "/oakd/rgb/preview/image_raw",
@@ -58,12 +62,15 @@ class ExecutePolicy(Node):
             10
         )
 
+        #variables to save the prediction and confidence
         self.label = None
         self.confidence = None
 
+        #actions for Hanim's code
         self.actions = self.action_move.get_action()
         self.get_logger().info('completed init. process')
 
+    #Read in camera feed
     def callback(self, msg):
         try:
             self.get_logger().info(f"0")
@@ -77,11 +84,21 @@ class ExecutePolicy(Node):
             self.get_logger().info(f"Camera could not be read")
             self.image = None
 
+    #Use the opened model and feed in image, make a prediction based off of it
     def predict(self):
         pred = self.model.predict(self.image, verbose=0)[0][0]
 
-        pred = pred if pred >= 0.566 else 1 - pred
-        self.label = "Right" if pred <= 0.563 else "Left"
+        #Essentially we're taking which one got the highest score, right is 1 and left is 0.
+        #If Center is in the set, it's 0.5
+        #It is possible that the binary classifier guesses left/right with low confidence with this
+        #and this code will interpret those as center (so do nothing)
+        pred = pred if pred >= 0.5 else 1 - pred
+        if pred >= 0.67:
+            self.label = "Right"
+        elif pred >= 0.33:
+            self.label = "Center"
+        else:
+            self.label = "Left"
         self.confidence = pred if pred >= 0.5 else 1 - pred
 
         self.get_logger().info(f"Prediction: {self.label}   (confidence {self.confidence:.3f})")
@@ -102,17 +119,20 @@ def main(args=None):
     # player = sys.argv[1:] # Attack (A), Defend (D)
     # node = ExecuteOptimal(player)
     node = ExecutePolicy()
+    #Wait a little to let the robot get data
     time.sleep(2)
     dual_going = True
     while dual_going:
         rclpy.spin_once(node, timeout_sec=0.1)
         if node.image is None:
+            #do nothing but search for an image if none comes through
             while node.image is None:
                 node.get_logger().warn('SEARCHING')
                 rclpy.spin_once(node, timeout_sec=0.1)
         node.predict()
-        #node.execute()
+        node.execute()
         node.label = None
+        #Human input to keep the robots in sync and to end dual if necessary
         if input('Did the balloon pop y/n?') == 'y':
             dual_going = False
     node.destroy_node()

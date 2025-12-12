@@ -20,7 +20,6 @@ class SingleFrameCapturer(Node):
         self.bridge = CvBridge()
         self.latest_frame = None
 
-        # Subscribe to the TurtleBot4 camera
         self.sub = self.create_subscription(
             Image,
             '/tb07/oakd/rgb/preview/image_raw',
@@ -60,6 +59,7 @@ def main():
     node = SingleFrameCapturer()
 
     try:
+        #Just keep scanning to get a frame and wait for keyboard input to save it
         while rclpy.ok():
             rclpy.spin_once(node, timeout_sec=0.1)
 

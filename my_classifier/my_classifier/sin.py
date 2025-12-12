@@ -87,8 +87,6 @@ class Movement(Node):
         self.cmd_publisher.publish(cmd)
         time.sleep(0.2)
 
-        # >>> PLACEHOLDER: your special attack code here <<< 
-
         #assming that attack_let mens that the arm moves left 
         self.arm_move(self.arm_go_right, left_joint_1=True)
 
