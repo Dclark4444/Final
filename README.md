@@ -1,7 +1,8 @@
 agent DEFEND, agent ATTACK Write-Up
 Authors: Hanim Nuru, Trey Clark 
 Course: CMSC 20600 - Intro Robotics
-Git: 
+Git: https://github.com/Dclark4444/Final.git
+(look in future_main branch)
 Project Description: 
 The goal of the project is to train both a defense and an attack robot using Neural Network classification and Multi-agent Reinforcement Learning allowing us to compare the efficiency of each in real time. The core components of the system include image classification, reinforcement learning, and robot kinematics. Comparing these two methods within the same ROS2 framework is particularly interesting because it highlights the tradeoffs between perception-based control (Neural Networks) and strategy-based control (Reinforcement Learning). This comparison provides a direct evaluation of latency, decision quality, and behavioral consistency, while offering insight into how learning-based systems perform under real-world physical constraints. 
 For the neural network, we are required to train on labeled data, essentially images saved in different folders depending on what position was being recorded. For example the defender's neural network had right, center, and left and in the respective folders were images of the attacker with their weapon right,center, and left. The network, along with a bunch of fine tweaks and specific algorithms, then trains on 80% of the data and tests itself on 20% of the data to get an accuracy score.
