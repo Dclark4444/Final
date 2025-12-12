@@ -44,18 +44,32 @@ class ReinforceLearn(Node):
         time.sleep(2)
 
 
-        # Fetch Actions and states (saved files)
+  
+         # Fetch Actions and states (saved files)
+         # Joint action --> [Attack, Defender]
+         # Attack Agent can Face/Turn to face opponent (0). Move_R/L (1,2), Arm home (3) Trick Move?Attack (4,5)
+         # Defend Agent can turn to face (0, Turn R/L (1,2, arm_up (3) arm_right/left (4,5)
         action_pth = os.path.join(self.share, 'matrices', 'action.txt')
         self.actions = np.loadtxt(action_pth)
 
+
+        # Atack agent states are indicies 0-1 and Defend are 2-3 
+        # index 0 represents the Attack Agent stance relative to Defense
+        # ==> 0 - in front, 1 - to the Right, 2 - to the left 
+        # index 1 represens the A Agent with Arm in Disguise (1), or Attacking (2), or just home (0)
+        
+        # index 2 represents the Defense Agent stance relative to Attack
+        # ===> forward facing (0), to_right (1), to_left (2)
+        # index 3 represents the D Agent Arm position 
+        # ==> home/up (0), arm_right (1), arm_left (2)
         state_pth = os.path.join(self.share, 'matrices', 'states.txt')
         self.states = np.loadtxt(state_pth)
 
-        state_n_state = os.path.join(self.share, 'matrices', 'state_nstate.txt')
-        self.state_n_state = np.loadtxt(state_n_state)
 
-        # known goal states for attacker and defending --> # No known states, just possible ones
-
+        # matric of states on the columns and the rows. 
+        # cells reutrn action indiceies if accessible, -1 if not.
+        state_nstate_pth = os.path.join(self.share, 'matrices', 'state_nstate.txt')
+        self.action_matrix = np.loadtxt(state_nstate_pth)
 
         # initialize RL matrix 
         self.RL_matrix = np.zeros((len(self.states), len(self.actions), 2)) # state-action-agenr(3 column matrix)
@@ -77,30 +91,40 @@ class ReinforceLearn(Node):
         max_trj = 500 
 
         if self.t >= max_trj:  # RL algorithm was has converged 
-            self.save_matrix()
+            self.save_matrix() # save the matrix 
 
         next_state_idx = random.randint(0, len(self.states))
+        
+        # use action_matrix (state_nstate) matrix to get a valid next action 
+        # because this is simulating the matrix,
+        #  don't have to have robots select and combine their actions 
+
         while self.action_matrix[self.curr_state_idx][next_state_idx] == -1:
             next_state_idx = random.randint(0, len(self.states))
 
+        # get next state and the joint action idx that gets you there 
         self.next_state_idx = next_state_idx 
         self.joint_action_idx = self.action_matrix[self.curr_state_idx][self.next_state_idx]
         self.curr_joint_action = self.actions[self.joint_action_idx]
 
-        self.V_s_prime = None  # resetting this parameter 
+        self.V_s_prime = None  # resetting minmax value for updating MARL matrix 
         action_msg = Action()
         action_msg.action_id = self.joint_action_idx
 
-        self.action_pub.publish(action_msg)
+        self.action_pub.publish(action_msg) # publish the action 
 
 
     def update_matrix(self):
         # given an agent id 
         agent_list  = ['A','D']
         
-        for agent_id, _ in agent_list: 
+        for agent_id, _ in agent_list:  # for every agent 
             
-            r_i = self.cur_reward[agent_id]
+            r_i = self.cur_reward[agent_id] 
+            # from teh joint reward, extract the agent-specific reward 
+
+
+            #define model parameters 
             alpha = 1 
             gamma = 1 
 
@@ -112,7 +136,7 @@ class ReinforceLearn(Node):
             # Reshape into the 5x5 Game Matrix M_i (rows=agent_i, columns=opponent)
             M_game_i = Q_s_prime_i_flat.reshape(5,5)
 
-            # 2. Calculate the maxminvalue 
+            #Calculate the maxminvalue 
             maxmin = np.max(np.min(M_game_i, axis=1))
 
             # get the curr value for the next stat e
@@ -124,15 +148,18 @@ class ReinforceLearn(Node):
 
     
     def reward_callback(self, msg:Reward):
-        """ calls an algorithm again after processing the reward, performing RL updates"""
+        """ Triggered by reward_simulator publishing a reward, 
+        calls an algorithm again after processing the reward, performing RL updates"""
         
         self.cur_reward = msg.reward 
         
-        self.update_matrix()
-        # after you update --- call action
+        self.update_matrix() # calls fucntion to update the matrix 
         
         self.t += 1  # update number of iterations 
-        self.start_RL_algorithm()
+
+        self.curr_state_idx = self.next_state_idx 
+        # set next state as teh curr state to run another action 
+        self.start_RL_algorithm() # beign RL algorithm again by getting a new action based on the current state 
 
 
 
